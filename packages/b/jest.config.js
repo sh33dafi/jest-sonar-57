@@ -2,6 +2,8 @@
 module.exports = async () => {
     return {
         coverageDirectory: `<rootDir>/coverage`,
-        reporters: ['default', 'jest-sonar'],
+        reporters: ['default', ['jest-sonar', {
+            relativeRootDir: '../../'
+        }]],
     };
 };
